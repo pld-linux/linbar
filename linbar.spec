@@ -7,7 +7,6 @@ License:	GPL
 Group:		System
 ######		Unknown group!
 Source0:	ftp://argeas.cs-net.gr/pub/unix/linux/linbar/%{name}-%{version}.tar.gz
-Patch0:		
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
