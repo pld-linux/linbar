@@ -9,14 +9,11 @@ Group:		System
 #Group(pl):	
 Source0:	ftp://argeas.cs-net.gr/pub/unix/linux/linbar/%{name}-%{version}.tar.gz
 Patch0:		
-Buildroot:	/tmp/%{name}-%{version}-root
-
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 
-
 %description -l pl
-
 
 %prep
 %setup -q
