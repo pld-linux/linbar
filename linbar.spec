@@ -7,6 +7,7 @@ License:	GPL
 Group:		Applications/System
 Source0:	ftp://argeas.cs-net.gr/pub/unix/linux/linbar/%{name}-%{version}.tar.gz
 # Source0-md5:	c835d07912b3ee84241530f68923e8ee
+BuildRequires:	libstdc++-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -25,13 +26,15 @@ konsol± Linuksa.
 %setup -q
 
 %build
-#./configure --prefix=%{_prefix}
-%{__make} RPM_OPT_FLAGS="%{rpmcflags}"
+%{__make} \
+	CC="%{__cxx}" \
+	OPTIMIZE="%{rpmcflags} -Wall" \
+	LDFLAGS="%{rpmldflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-#%{__make} prefix=$RPM_BUILD_ROOT%{_prefix} install
 install -d $RPM_BUILD_ROOT%{_bindir}
+
 install linbar $RPM_BUILD_ROOT%{_bindir}
 
 %clean
@@ -39,5 +42,5 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_bindir}/linbar
 %doc BUGS README INSTALL TODO
+%attr(755,root,root) %{_bindir}/linbar
