@@ -6,6 +6,7 @@ Release:	1
 License:	GPL
 Group:		Applications/System
 Source0:	ftp://argeas.cs-net.gr/pub/unix/linux/linbar/%{name}-%{version}.tar.gz
+# Source0-md5:	78d241b00cbbd2496899d347ffb9ef5c
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
