@@ -1,12 +1,12 @@
 Summary:	LinBar - Linux Barcode support
 Summary(pl):	LinBar - obs³uga czytników kodów paskowych dla Linuksa
 Name:		linbar
-Version:	0.4
+Version:	0.5
 Release:	1
 License:	GPL
 Group:		Applications/System
 Source0:	ftp://argeas.cs-net.gr/pub/unix/linux/linbar/%{name}-%{version}.tar.gz
-# Source0-md5:	78d241b00cbbd2496899d347ffb9ef5c
+# Source0-md5:	c835d07912b3ee84241530f68923e8ee
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -30,12 +30,14 @@ konsol± Linuksa.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-%{__make} prefix=$RPM_BUILD_ROOT%{_prefix} install
+#%{__make} prefix=$RPM_BUILD_ROOT%{_prefix} install
+install -d $RPM_BUILD_ROOT%{_bindir}
+install linbar $RPM_BUILD_ROOT%{_bindir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc
-#%attr(,,)
+%attr(755,root,root) %{_bindir}/linbar
+%doc BUGS README INSTALL TODO
