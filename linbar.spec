@@ -20,10 +20,10 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %build
 #./configure --prefix=%{_prefix}
-make RPM_OPT_FLAGS="$RPM_OPT_FLAGS"
+%{__make} RPM_OPT_FLAGS="$RPM_OPT_FLAGS"
 
 %install
-make prefix=$RPM_BUILD_ROOT%{_prefix} install
+%{__make} prefix=$RPM_BUILD_ROOT%{_prefix} install
 
 %clean
 rm -rf $RPM_BUILD_ROOT
