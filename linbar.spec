@@ -6,7 +6,6 @@ Release:	1
 License:	GPL
 Group:		System
 ######		Unknown group!
-#Group(pl):	
 Source0:	ftp://argeas.cs-net.gr/pub/unix/linux/linbar/%{name}-%{version}.tar.gz
 Patch0:		
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -20,9 +19,10 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %build
 #./configure --prefix=%{_prefix}
-%{__make} RPM_OPT_FLAGS="$RPM_OPT_FLAGS"
+%{__make} RPM_OPT_FLAGS="%{rpmcflags}"
 
 %install
+rm -rf $RPM_BUILD_ROOT
 %{__make} prefix=$RPM_BUILD_ROOT%{_prefix} install
 
 %clean
