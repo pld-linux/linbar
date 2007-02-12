@@ -1,5 +1,5 @@
 Summary:	LinBar - Linux Barcode support
-Summary(pl):	LinBar - obs≥uga czytnikÛw kodÛw paskowych dla Linuksa
+Summary(pl.UTF-8):   LinBar - obs≈Çuga czytnik√≥w kod√≥w paskowych dla Linuksa
 Name:		linbar
 Version:	0.5
 Release:	1
@@ -16,11 +16,11 @@ characters to the current console keyboard buffer. It's primary usage
 is for serial barcode readers. As far as I know, it works only on
 Linux console.
 
-%description -l pl
+%description -l pl.UTF-8
 Program linbar czyta z zadanego portu szeregowego i odczytane znaki
-wrzuca do bufora klawiatury aktualnej konsoli. G≥Ûwnym zastosowaniem
-jest obs≥uga czytnikÛw kodÛw paskowych. Jak na razie dzia≥a tylko z
-konsol± Linuksa.
+wrzuca do bufora klawiatury aktualnej konsoli. G≈Ç√≥wnym zastosowaniem
+jest obs≈Çuga czytnik√≥w kod√≥w paskowych. Jak na razie dzia≈Ça tylko z
+konsolƒÖ Linuksa.
 
 %prep
 %setup -q
