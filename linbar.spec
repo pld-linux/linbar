@@ -1,5 +1,5 @@
 Summary:	LinBar - Linux Barcode support
-Summary(pl.UTF-8):   LinBar - obsługa czytników kodów paskowych dla Linuksa
+Summary(pl.UTF-8):	LinBar - obsługa czytników kodów paskowych dla Linuksa
 Name:		linbar
 Version:	0.5
 Release:	1
